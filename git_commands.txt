@@ -1,0 +1,75 @@
+git config user.name “name”
+git config user.email “email”
+
+cat “filename” – to execute that file
+ls -la  list of files but with log or hidden
+
+git init - initiate git
+git status – see files in staging area
+git status -v  see changes (if any)
+git add – add files to staging area
+git add “.”  will add all deleted, modified or new files to staging area
+git commit – write changes to git repository
+git commit -m “commit name”
+git commit -a -m “commit name” automatically moves to staging area
+git commit --amend -m “new message”  amend last commit message
+git commit --amend --author=”Mike Githubber <mikegit@gmail.com>”
+git log – history of changes(commits)(ctrl+z to quit)
+git ls-files -s – To see files in git repository, observing status of staging area
+git rm  - -  cached “filename” – Removes specific file from staging area
+
+git branch  List all local branches
+git branch <name>  Create new branch
+git checkout <name>  Checkout specific branch
+git branch -d <name>  Delete specific branch
+git branch -D <name>  Force delete specific branch
+
+git branch -m <old> <new>  Rename specific branch
+git branch -a  See all remotes/local branches
+git branch -r   See all remote branches
+git branch -vv  to see branches
+git checkout -b <branch name>  Shortcut for creating a branch with checkout
+git cat-file -p <hash file>  to see content of that object 
+
+git merge <branch we want to commit to>  Merge branches
+
+git clone <link https>  to clone repository from github
+
+git remote  see remote git servers
+git remote show origin  to show url remote and info
+git remote update origin --prune  if remote repo is deleted and we need to sync with local
+git remote add “upstream” “git link from original remote repo”  to add a remote server 
+
+
+git pull consists of git fetch and git merge on your local changes
+git pull merges remote branch into current branch
+git pull -v  pull changes with details
+git pull upstream master  -v  to pull data from upstream to local repo
+
+git fetch -v  
+git fetch upstream -v  fetch branches from upstream repo
+
+git push -v  for any changes and for when remote repo is already created 
+git push -v -u origin “new branch name for remote”(I am in the same local repository with the same name)
+git push -u origin “repo name”  creating remote repository from local and push
+git push origin -d “repo name”  delete remote repo
+
+git show-ref  See all references
+
+To use “git lg” if doesn’t work in terminal:
+
+git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit"
+
+git log --graph  to see commits made
+git log --stat  every commit, quantity of changes in specific commit
+git log --oneline  see git log but with only one line per commit
+git shortlog  To see name of commits only
+git shortlog -n -s -e  To see emails of who changes 
+git log --grep=”keyword” --oneline  it will search commits by “keyword”
+git log --merges  to see only merged commits
+
+git reset “HASH nr”  all further commits will be deleted
+git reset --hard <SHA Hash> delete everything 
+
+git cherry-pick “Hash nr”  it copies commit from that branch to a different one and to the latest
+git cherry-pick --no-commit “hash nr”  it copies but doesn’t commit, ready to be commited
