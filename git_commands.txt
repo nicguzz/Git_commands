@@ -1,3 +1,5 @@
+```
+
 git config user.name “name”
 git config user.email “email”
 
@@ -73,3 +75,5 @@ git reset --hard <SHA Hash> delete everything
 
 git cherry-pick “Hash nr”  it copies commit from that branch to a different one and to the latest
 git cherry-pick --no-commit “hash nr”  it copies but doesn’t commit, ready to be commited
+
+```
